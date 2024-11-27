@@ -1,0 +1,125 @@
+@font-face {
+    font-family: wow font ;
+    src: url("Creative\ Handmade.otf");
+}
+h1{
+    font-family: 'wow font';
+}
+
+
+
+
+
+
+/* General Reset */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #004080;
+    color: white;
+    padding: 10px 20px;
+}
+.main-nav ul {
+    font-size: 50PX;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-family: 'wow font';
+}
+.main-nav ul li {
+    margin: 0 10px;
+}
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background: url('campus.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 60px 20px;
+}
+.hero h1 {
+    font-size: 2.5rem;
+}
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+.content-section h2 {
+    color: #004080;
+    margin-bottom: 20px;
+}
+.content-section p {
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-links, .social-media {
+    margin: 10px 0;
+}
+.footer-links a, .social-media a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSM Department - MREC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        @font-face {
+    font-family: wow font ;
+    src: url("Creative\ Handmade.otf");
+}
+h1{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 490; 
+}
+
+
+        :root {
+            --primary-color: #ebb2eb;
+            --primary-dark: #0a090aab;
+            --background-light: #f9fafb;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+        }
+
+        body {
+            background-color: var(--background-light);
+            padding: 0px 50px;
+        }
+
+        /* Header Styles */
+        .head h2{
+            font-size: 30px;
+        }
+        .head {
+            width :70%;
+        }
+        .header {
+            padding-left: 50px;
+            background-color: var(--primary-color);
+            color:black;
+            font-size: 15PX;
+            line-height: 55px;
+            font-style:normal;
+            font-weight:lighter;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            letter-spacing: 5px;
+            padding: 1.5rem;
+        }
+        .navbar{
+            width: 2000px;
+            height: 300px;
+            background-color:#ebb2eb ;
+            padding: 2px auto;
+            padding-left: 250px;
+            
+
+        }
+
+        .header-content {
+            max-width: 100%;
+            margin: 30px auto;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .head h2{
+            margin-top: 20px;
+            margin-left: 50px;
+            padding-left: 70px;
+
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            
+        }
+        .centerblock {
+             /* background-color: red; */
+             display: flex;
+             flex-direction: column;
+             gap: 50px;
+             width: 100%   ;
+        }
+
+        /* Navigation Styles */
+        .nav {
+            width: 100%;
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-content {
+            max-width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .nav-button {
+            padding: 0.5rem 1rem;
+            border: none;
+            background: none;
+            cursor: pointer;
+            color: var(--text-dark);
+            border-radius: 0.25rem;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: var(--background-light);
+        }
+
+        .nav-button.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            max-width: 90%;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            margin-right: 20px 7px;
+        }
+        .fac{
+            display: flex;
+          gap:250px;
+        }
+        .logo2{
+            width: 150px;
+            height: 150px;
+            border-radius:10% ;
+        }
+
+        .section {
+            display: none;
+            background: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            display: flex;
+            justify-content: center;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .images{
+            display: flex;
+            gap:70px;
+
+        }
+        .car{
+            
+           
+        }
+
+        /* Table Styles */
+        .timetable {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .timetable th, .timetable td {
+            border: 1px solid #e5e7eb;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        .timetable th {
+            background-color: var(--background-light);
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            height: 180px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer h3 {
+            margin-bottom: 1rem;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-content {
+                flex-wrap: wrap;
+            }
+            
+            .nav-button {
+                font-size: 0.875rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+     <div class="navbar">
+    <header class="header">
+        <div class="header-content">
+            <img src="Screenshot 2024-11-23 145012.png" alt="MREC Logo" class="logo">
+            <div class="head">
+                <h1 align="center">COMPUTER SCIENCE & ENGINEERING In <br>ARTIFICIAL INTELLIGENCE & MACHINE LEARNING</h1>
+                <h2 align="center">Malla Reddy Engineering College</h2>
+            </div>
+        </div>
+    </header>
+</div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-content" >
+            <button class="nav-button active" data-tab="home" style="font-size: 20px; border: 1px solid black;" >Home</button>
+            <button class="nav-button" data-tab="courses"style="font-size: 20px;border: 1px solid black;" >Courses</button>
+            <button class="nav-button" data-tab="faculty"style="font-size: 20px;border: 1px solid black;" >Faculty</button>
+            <button class="nav-button" data-tab="timetable"style="font-size: 20px;border: 1px solid black;" >Timetable</button>
+            <button class="nav-button" data-tab="activities"style="font-size: 20px;border: 1px solid black;" >Activities</button>
+            <button class="nav-button" data-tab="achievements"style="font-size: 20px;border: 1px solid black;" >Achievements</button>
+            <button class="nav-button" data-tab="toppers"style="font-size: 20px;border: 1px solid black;" >Toppers</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="centerblock" style="height: 700px;">
+            <h2 style="font-size: 50px;" align="center ">Welcome to CSM Department</h2>
+            <p style="font-size: 35px; line-height: 70px; font-family: 'Times New Roman', Times, serif;">Welcome to the Department of Computer Science In Artificial Intelligence & Machine Learning at Malla Reddy Engineering College. 
+               Under the leadership of our HOD, Dr. U Mohan Srinivas, we strive for excellence in education and innovation.
+               The program is Affiliated to JNTU.
+               Artificial intelligence (AI) refers to the development of computer systems that mimic a human
+                brain and enable them to perform tasks that usually require human intelligence. Machine learning is a specific form of 
+               AI that allows computers to learn and grow after they are introduced to scenarios in the form of data</p>
+            </div>
+           
+        
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="section">
+       
+            <div class="card-grid">
+                <div class="card1" >
+                    <h2 style="font-size: 30px; padding-bottom: 20px;">Our Courses</h2>
+                    <ul style="font-size: 20px;">
+                        <li style="font-size: 20px;" >Machine Learning</li>
+                        <li style="font-size: 20px;" >Deep Learning</li>
+                        <li style="font-size: 20px;" >Data Structures</li>
+                        <li style="font-size: 20px;" >Python Programming</li>
+                    </ul>
+                </div>
+                <div class="card1">
+                    <h3 style="font-size: 30px; padding-bottom: 20px;" >Top Subjects you will learn
+                    </h3>
+                    <p style="font-size: 20px;" >Fundamentals of Artificial Intelligence, Computer Organization 
+                        and Architecture, Image Processing, Design and Analysis of Algorithms</p>
+                </div>
+                <div class="card1">
+                    <h3 style="font-size: 30px; padding-bottom: 20px;">Job Opportunity</h3>
+                    <p style="font-size: 20px;">Machine Learning Engineer, Data Scientist, Business
+                         Intelligence Developer, Research Scientist, Big Data Engineer/Architect, Software Engineer,
+                         Software Architect, Data Analyst, Robotics Engineer, Natural Language Processing (NLP) engineers, AI Data Analyst</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Faculty Section -->
+        <section id="faculty" class="section" align="center">
+            <h2>Our Faculty</h2>
+            <div class="fac">
+            <div class="card">
+                <h3 style="font-size: 30px; line-height: 35px; margin-right: 30px; padding-top: 30px;"  >Head of Department <br></h3>
+                <p style="font-size: 20px; line-height: 35px;padding-top: 30px;margin-right: 15px;" >Dr. U Mohan Srinivas</p>
+                <p style="font-size: 20px; line-height: 35px;padding-top: 30px;" >Ph.D. in Computer Science</p>
+            </div>
+            <div> <img src="hod.jpeg" alt="MREC Logo" class="logo2"></div>
+        </div>
+            <div class="card-grid">
+                <!-- Faculty cards will be dynamically populated -->
+            </div>
+        </section>
+
+        <!-- Timetable Section -->
+        <section id="timetable" class="section">
+            <h2>Class Timetable</h2>
+            <div class="card">
+               
+                <table class="timetable">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Timetable rows will be dynamically populated -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Activities Section -->
+        <section id="activities" class="section">
+            <h2 style="font-size: 40px; margin-bottom: 50px;">Department Activities</h2>
+            <div class="images">
+            <div >
+               
+                <img src="image.png" width="380" height="362" alt="Vishesh 2K24" class="w-full h-full object-cover" style="border-top-right-radius: 20%;">
+            </div>
+            <div><img src="Screenshot 2024-11-23 140411.png" width="380" height="362" alt="Vishesh 2K24" class="w-full h-full object-cover" style="border-top-right-radius: 20%;"></div>
+            <div><img src="Screenshot 2024-11-23 140508.png" width="380" height="362" alt="Vishesh 2K24" class="w-full h-full object-cover" style="border-top-right-radius: 20%;"></div>
+           </div>
+           <div class="card-grid1">
+            
+            <h1 style="margin-bottom: 30px; margin-top: 30px;" > <b> Generative AI and Prompt Engineering</b></h1>
+               <p style="font-size: 20px; line-height: 40px;"> Workshop on Generative AI & Prompt Engineering was organized by Department of CSE(AIML), 
+                Malla Reddy Engineering College (Autonomous), Secunderabad - 500100 on Date: 10th November, 2023. 
+                The modules covered are • What is Gen-AI • Prompt engineering • Best ways to use prompt engineering • What is responsible AI</p>
+        </div>
+        </section>
+
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="section">
+            <h2>Department Achievements</h2>
+            <div class="car">
+            <div > 
+                
+                <div><img src="Screenshot 2024-11-23 142404.png" width="380" height="362" 
+                    alt="Vishesh 2K24" class="w-full h-full object-cover" style="border-top-right-radius: 20%;"></div>
+            </div>
+            <div><img src="Screenshot 2024-11-23 142422.png" width="380" height="362" 
+                alt="Vishesh 2K24" class="w-full h-full object-cover" style="border-top-right-radius: 20%;"></div>
+        </div>
+        <div><img src="Screenshot 2024-11-23 142429.png" width="380" height="362" 
+            alt="Vishesh 2K24" class="w-full h-full object-cover" style="border-top-right-radius: 20%;"></div>
+    </div>
+    <div><img src="Screenshot 2024-11-23 142436.png" width="380" height="362" 
+        alt="Vishesh 2K24" class="w-full h-full object-cover" style="border-top-right-radius: 20%;"></div>
+        </section></div>
+        
+
+
+        </section>
+
+        <!-- Toppers Section -->
+        <section id="toppers" class="section">
+            <h2>Class Toppers</h2>
+            <div class="card-grid">
+                <div><img src="Screenshot 2024-11-23 143757.png" width="500" height="390" 
+                    alt="Vishesh 2K24" class="w-full h-full object-cover" ></div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footleft" style="line-height: 40px;" >
+                <h3 style="font-size: 35px;">Contact Us</h3>
+                <p style="font-size: 18px;">Malla Reddy Engineering College</p>
+                <p style="font-size: 18px;">Department of CSM</p>
+                <p style="font-size: 18px;" >Email: csm@mrec.ac.in</p>
+            </div>
+            <div style="line-height: 40px;">
+                <h3 style="font-size: 35px;">Quick Links</h3>
+                <p style="font-size: 18px;"><a href="http://teamaiml.com">TeamAIML Community</a></p>
+                <p style="font-size: 18px;"><a href="#">Academic Calendar</a></p>
+                <p style="font-size: 18px;"><a href="#">Student Portal</a></p>
+            </div>
+            <div style="line-height: 40px;" >
+                <h3  style="font-size: 35px;">Follow Us</h3>
+                <p style="font-size: 18px;"><a href="#">LinkedIn</a></p>
+                <p style="font-size: 18px;"><a href="#">Twitter</a></p>
+                <p style="font-size: 18px;"><a href="#">Instagram</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab Switching Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const navButtons = document.querySelectorAll('.nav-button');
+            const sections = document.querySelectorAll('.section');
+
+            function switchTab(tabId) {
+                // Remove active class from all buttons and sections
+                navButtons.forEach(btn => btn.classList.remove('active'));
+                sections.forEach(section => section.classList.remove('active'));
+
+                // Add active class to clicked button and corresponding section
+                const activeButton = document.querySelector(`[data-tab="${tabId}"]`);
+                const activeSection = document.getElementById(tabId);
+                
+                if (activeButton && activeSection) {
+                    activeButton.classList.add('active');
+                    activeSection.classList.add('active');
+                }
+            }
+
+            // Add click event listeners to nav buttons
+            navButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const tabId = button.getAttribute('data-tab');
+                    switchTab(tabId);
+                });
+            });
+
+            // Populate dynamic content
+            function populateFaculty() {
+                const facultyGrid = document.querySelector('#faculty .card-grid');
+                const facultyMembers = [
+                    { name: 'Mr. CH V S Suryanarayana', specialization: '--Computer Network' },
+                    { name: 'Mr.Ch. Satyanarayana', specialization: '--Deep Learning' },
+                    { name: 'Mr. M. Jaganmohan Reddy', specialization: '--Machine Learning' },
+                    // Add more faculty members as needed
+                ];
+
+                facultyGrid.innerHTML = facultyMembers.map(faculty => `
+                    <div class="card" style="margin-right=20px;">
+                        
+                        <h4>${faculty.name}</h4>
+                        <p>${faculty.specialization}</p>
+                    </div>
+                `).join('');
+            }
+
+            function populateTimetable() {
+                const timetableBody = document.querySelector('.timetable tbody');
+                const periods = ['9:00 - 10:00', '10:00 - 11:00', '11:15 - 12:15'];
+                
+                timetableBody.innerHTML = periods.map(period => `
+                    <tr>
+                        <td>${period}</td>
+                        <td>Machine Learning</td>
+                        <td>Deep Learning</td>
+                        <td>Artificial Intelligence</td>
+                        <td>Computer Networks</td>
+                        <td>Python</td>
+                    </tr>
+                `).join('');
+            }
+
+            // Initialize dynamic content
+            populateFaculty();
+            populateTimetable();
+        });
+    </script>
+</body>
+</html>
